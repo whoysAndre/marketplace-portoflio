@@ -1,4 +1,5 @@
 export const usePaginatedProducts = async () => {
+  
   const route = useRoute();
 
   const page = computed(() => {
@@ -23,10 +24,11 @@ export const usePaginatedProducts = async () => {
         limit,
         offset,
       },
-
       watch: [page, limit],
+      key: 'productspage'
     }
   );
+
 
 
   return {

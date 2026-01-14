@@ -67,6 +67,7 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
     state.tags = undefined;
 
     await refreshNuxtData('products');
+    await refreshNuxtData('productspage');
 
   } catch (error: any) {
     toast.add({
