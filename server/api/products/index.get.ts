@@ -12,6 +12,9 @@ export default defineEventHandler(async (event) => {
     include: {
       user: true
     },
+    where:{
+      is_active: true
+    },
     take: limit,
     skip: offset,
   });

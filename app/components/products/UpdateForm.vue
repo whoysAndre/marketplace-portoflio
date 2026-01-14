@@ -79,6 +79,7 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
 
     await refreshNuxtData('products');
     await refreshNuxtData('productspage');
+    
   } catch (error: any) {
     console.error('Error updating product:', error);
     toast.add({
