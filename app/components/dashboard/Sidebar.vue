@@ -1,10 +1,11 @@
 <script setup lang="ts">
 // https://ui.nuxt.com/docs/components/dashboard-sidebar
-import {
-  type CommandPaletteGroup,
-  type CommandPaletteItem,
-  type NavigationMenuItem,
-} from '@nuxt/ui';
+import type {
+  CommandPaletteGroup,
+  CommandPaletteItem,
+  NavigationMenuItem
+} from '#ui/types'
+
 const items: NavigationMenuItem[][] = [
   [
     {
@@ -21,12 +22,13 @@ const items: NavigationMenuItem[][] = [
       exact: false,
     },
     {
-      label: 'Contacts',
+      label: 'Contactos',
       icon: 'i-lucide-users',
+      to: '/dashboard/contacts',
     }
   ],
+]
 
-];
 const searchGroups = ref<CommandPaletteGroup<CommandPaletteItem>[]>([
   {
     label: 'Productos',
@@ -41,7 +43,7 @@ const searchGroups = ref<CommandPaletteGroup<CommandPaletteItem>[]>([
       },
     ],
   },
-]);
+])
 </script>
 
 <template>
@@ -57,7 +59,7 @@ const searchGroups = ref<CommandPaletteGroup<CommandPaletteItem>[]>([
 
       <UNavigationMenu :collapsed="collapsed" :items="items[0]" orientation="vertical" />
       <UNavigationMenu :collapsed="collapsed" :items="items[1]" orientation="vertical" class="mt-auto" />
-      
+
       <div class="">
         <UDashboardSidebarCollapse color="neutral" variant="ghost" square class="w-full"
           :title="collapsed ? 'Expandir' : 'Contraer'" />
