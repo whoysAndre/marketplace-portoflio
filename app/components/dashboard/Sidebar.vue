@@ -3,9 +3,8 @@
 import type {
   CommandPaletteGroup,
   CommandPaletteItem,
-  NavigationMenuItem
-} from '#ui/types'
-
+  NavigationMenuItem,
+} from '@nuxt/ui';
 const items: NavigationMenuItem[][] = [
   [
     {
@@ -22,13 +21,12 @@ const items: NavigationMenuItem[][] = [
       exact: false,
     },
     {
-      label: 'Contactos',
+      label: 'Contacts',
       icon: 'i-lucide-users',
-      to: '/dashboard/contacts',
     }
   ],
-]
 
+];
 const searchGroups = ref<CommandPaletteGroup<CommandPaletteItem>[]>([
   {
     label: 'Productos',
@@ -43,7 +41,7 @@ const searchGroups = ref<CommandPaletteGroup<CommandPaletteItem>[]>([
       },
     ],
   },
-])
+]);
 </script>
 
 <template>
