@@ -1,0 +1,9 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "@nuxt/ui";
+
+@layer base {
+  html {
+    font-family: 'Montserrat Alternates', system-ui, sans-serif;
+  }
+}
