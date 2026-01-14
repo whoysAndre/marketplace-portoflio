@@ -80,7 +80,7 @@ Una aplicación de marketplace moderna construida con **Nuxt 4** y **Vue 3**, do
 ### 1. Clonar el repositorio
 
 ```bash
-git clone https://github.com/tu-usuario/marketplace.git
+git clone https://github.com/tu-usuario/marketplace.git](https://github.com/whoysAndre/marketplace-portoflio
 cd marketplace
 ```
 
